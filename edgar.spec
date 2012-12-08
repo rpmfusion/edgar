@@ -1,6 +1,6 @@
 Name:           edgar
-Version:        1.04
-Release:        2%{?dist}
+Version:        1.05
+Release:        1%{?dist}
 Summary:        A platform game
 
 # edgar contains sounds licensed under a "bad" Fedora license:
@@ -97,6 +97,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Thu Dec 06 2012 Andrea Musuruane <musuruan@gmail.com> - 1.05-1
+- Updated to upstream 1.05-1
+
 * Sun Oct 28 2012 Andrea Musuruane <musuruan@gmail.com> - 1.04-2
 - Fixed license (BZ #2378)
 
