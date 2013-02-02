@@ -1,5 +1,5 @@
 Name:           edgar
-Version:        1.05
+Version:        1.06
 Release:        1%{?dist}
 Summary:        A platform game
 
@@ -97,6 +97,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Sat Jan 26 2013 Andrea Musuruane <musuruan@gmail.com> - 1.06-1
+- Updated to upstream 1.06-1
+
 * Thu Dec 06 2012 Andrea Musuruane <musuruan@gmail.com> - 1.05-1
 - Updated to upstream 1.05-1
 
