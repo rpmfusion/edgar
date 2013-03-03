@@ -1,13 +1,13 @@
 Name:           edgar
-Version:        1.06
-Release:        2%{?dist}
+Version:        1.07
+Release:        1%{?dist}
 Summary:        A platform game
 
 # edgar contains sounds licensed under a "bad" Fedora license:
 # https://bugzilla.redhat.com/show_bug.cgi?id=816565
 License:        GPLv2+ and freely redistributable, no commercial use
 URL:            http://www.parallelrealities.co.uk/p/legend-of-edgar.html
-Source0:        http://downloads.sourceforge.net/legendofedgar/%{name}/%{name}-%{version}-2.tar.gz
+Source0:        http://downloads.sourceforge.net/legendofedgar/%{name}/%{name}-%{version}-1.tar.gz
 
 BuildRequires: SDL_image-devel
 BuildRequires: SDL_mixer-devel
@@ -97,6 +97,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Sun Mar 03 2013 Andrea Musuruane <musuruan@gmail.com> - 1.07-1
+- Updated to upstream 1.07-1
+
 * Fri Feb 08 2013 Andrea Musuruane <musuruan@gmail.com> - 1.06-2
 - Updated to upstream 1.06-2
 
