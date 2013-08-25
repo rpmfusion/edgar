@@ -1,11 +1,13 @@
+%{!?_pkgdocdir: %global _pkgdocdir %{_docdir}/%{name}-%{version}}
+
 Name:           edgar
-Version:        1.09
+Version:        1.12
 Release:        1%{?dist}
 Summary:        A platform game
 
-# edgar contains sounds licensed under a "bad" Fedora license:
-# https://bugzilla.redhat.com/show_bug.cgi?id=816565
-License:        GPLv2+ and freely redistributable, no commercial use
+# edgar now contains sounds licensed under a "good" Fedora license:
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=653813#80
+License:        GPLv2+ and CC-BY and CC-BY-SA and CC0 and GPLv3
 URL:            http://www.parallelrealities.co.uk/p/legend-of-edgar.html
 Source0:        http://downloads.sourceforge.net/legendofedgar/%{name}/%{name}-%{version}-1.tar.gz
 
@@ -61,7 +63,7 @@ rm -rf %{buildroot}
 make install DESTDIR=%{buildroot} \
   BIN_DIR=%{buildroot}%{_bindir}/ \
   DATA_DIR=%{buildroot}%{_datadir}/%{name}/ \
-  DOC_DIR=%{buildroot}%{_docdir}/%{name}-%{version}/
+  DOC_DIR=%{buildroot}%{_pkgdocdir}
 
 desktop-file-install \
   --delete-original \
@@ -93,10 +95,15 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
-%doc %{_docdir}/%{name}-%{version}
+%doc %{_pkgdocdir}
 
 
 %changelog
+* Sun Aug 25 2013 Andrea Musuruane <musuruan@gmail.com> - 1.12-1
+- Updated to upstream 1.12-1
+- Used unversioned docdir
+- Sounds are now licensed under a "good" Fedora license
+
 * Wed Jun 19 2013 Andrea Musuruane <musuruan@gmail.com> - 1.09-1
 - Updated to upstream 1.09-1
 
